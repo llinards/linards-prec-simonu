@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .bg-main-color-1 {
+        background-color: rgb(171, 95, 35)
+    }
+}
+
+
+section#introduction {
+    background-image: url('/public/storage/intro-background.jpg');
+}

@@ -17,7 +17,7 @@
     @endif
 
     <!-- Page Content -->
-    <main class="h-[100dvh] overflow-y-scroll snap-mandatory snap-y">
+    <main class="h-[100dvh] overflow-y-scroll snap-mandatory snap-y scroll-smooth">
         {{ $slot }}
     </main>
 </div>
