@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.partials.header')
 <body class="font-sans antialiased">
-<div class="min-h-screen bg-gray-100">
+<div class="bg-gray-100">
     @if (isset($admin))
         @include('layouts.navigation')
     @endif
