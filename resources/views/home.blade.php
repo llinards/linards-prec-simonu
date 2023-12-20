@@ -8,41 +8,51 @@
         <x-arrow-down :id="'rsvp'" class="animate-bounce"/>
     </x-section>
     <x-section :id="'rsvp'" class="bg-main-color-1 justify-between justify-items-center">
-        <div class="mt-auto mb-auto">
+        <div class="mt-auto mb-auto container mx-auto">
             <div class="text-center">
                 <h2 class="lg:text-4xl sm:text-3xl text-2xl text-white text-center">RSVP</h2>
-                <p class="text-white">Lūdzam apstiprināt ierašanos līdz <span class="font-bold">30.10.2025.</span></p>
+                <p id="guest-submission-deadline" class="text-white">Lūdzam apstiprināt ierašanos līdz <span
+                        class="font-bold">30.10.2025.</span></p>
             </div>
-            <form method="POST" action="#" class="max-w-md mx-auto sm:px-0 px-5 mt-3">
+            @session('message')
+            <x-status-message>
+                {{$value}}
+            </x-status-message>
+            @endsession
+            <form method="POST" id="guest-submission-form" action="{{ route('guests.store', '#rsvp') }}"
+                  class="max-w-md mx-auto sm:px-0 px-5 mt-3">
                 @csrf
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="guest_first_name" id="guest_first_name"
+                        <input type="text" name="first_name" id="first_name"
                                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
-                               placeholder=" " value="{{ old('guest_first_name') }}" required>
-                        <label for="guest_first_name"
+                               placeholder=" " value="{{ old('first_name') }}">
+                        <label for="first_name"
                                class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Vārds</label>
+                        <x-input-error :messages="$errors->get('first_name')" class="mt-2 text-white"/>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="guest_last_name" id="guest_last_name"
+                        <input type="text" name="last_name" id="last_name"
                                class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
-                               placeholder=" " value="{{ old('guest_last_name') }}" required/>
-                        <label for="guest_last_name"
+                               placeholder=" " value="{{ old('last_name') }}"/>
+                        <label for="last_name"
                                class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Uzvārds</label>
+                        <x-input-error :messages="$errors->get('last_name')" class="mt-2 text-white"/>
                     </div>
                 </div>
                 <div class="relative z-0 w-full mb-5 group">
-                    <input type="tel" name="guest_phone" id="guest_phone"
+                    <input type="tel" name="phone_number" id="phone_number"
                            class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
-                           placeholder=" " value="{{ old('guest_phone') }}" required/>
-                    <label for="guest_phone"
+                           placeholder=" " value="{{ old('phone_number') }}"/>
+                    <label for="phone_number"
                            class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Kontakttālrunis</label>
+                    <x-input-error :messages="$errors->get('phone_number')" class="mt-2 text-white"/>
                 </div>
                 <fieldset class="mb-5">
                     <p class="text-white text-sm text-center mb-3">Nakšņošu?</p>
                     <div class="flex justify-around">
                         <div class="flex items-center mb-4">
-                            <input id="country-option-1" type="radio" name="guest_staying_overnight" value="yes"
+                            <input id="country-option-1" type="radio" name="is_staying" value="yes"
                                    class="w-4 h-4 border-black focus:ring-black focis:ring-black selected:ring-black">
                             <label for="country-option-1"
                                    class="block ms-2 text-sm font-medium text-white">
@@ -50,7 +60,7 @@
                             </label>
                         </div>
                         <div class="flex items-center mb-4">
-                            <input id="country-option-2" type="radio" name="guest_staying_overnight" value="no"
+                            <input id="country-option-2" type="radio" name="is_staying" value="no"
                                    class="w-4 h-4 border-black focus:ring-2 focus:ring-black">
                             <label for="country-option-2"
                                    class="block ms-2 text-sm font-medium text-white">
@@ -58,6 +68,7 @@
                             </label>
                         </div>
                     </div>
+                    <x-input-error :messages="$errors->get('is_staying')" class="mt-2 text-white"/>
                 </fieldset>
                 <div class="flex justify-center">
                     <button type="submit"
@@ -70,3 +81,11 @@
         <x-arrow-down :id="'introduction'" class="text-white"/>
     </x-section>
 </x-app-layout>
+
+<script>
+    const successMessage = document.getElementById('status-message');
+    if (successMessage) {
+        document.getElementById('guest-submission-deadline').classList.add('hidden');
+        document.getElementById('guest-submission-form').classList.add('hidden')
+    }
+</script>
