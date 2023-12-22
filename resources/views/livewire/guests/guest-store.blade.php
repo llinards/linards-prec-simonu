@@ -1,12 +1,12 @@
 <div>
     @if(!$after_submit)
         <h2 class="lg:text-4xl sm:text-3xl text-2xl text-white text-center">RSVP</h2>
-        <p id="guest-submission-deadline" class="text-white text-center">Lūdzam apstiprināt ierašanos līdz <span
+        <p class="text-white text-center">Lūdzam apstiprināt ierašanos līdz <span
                 class="font-bold">30.10.2025.</span></p>
     @endif
     <x-status-message/>
     @if($is_visible)
-        <form wire:submit="save" id="guest-submission-form" class="max-w-md mx-auto sm:px-0 px-5 mt-3">
+        <form wire:submit="save" class="max-w-md mx-auto sm:px-0 px-5 mt-3">
             <div class="grid md:grid-cols-2 md:gap-6">
                 <div class="relative z-0 w-full mb-5 group">
                     <input wire:model="first_name" type="text" name="first_name" id="first_name"
@@ -63,7 +63,7 @@
         </form>
     @endif
     @if($after_submit)
-        <div class="flex justify-center">
+        <div class="flex justify-center max-w-md mx-auto sm:px-0 px-5">
             <x-primary-button class="bg-white text-black" type="button" wire:click="toggleFormVisibility">
                 Pievienot vēl viesi
             </x-primary-button>
