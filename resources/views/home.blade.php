@@ -9,9 +9,6 @@
     </x-section>
     <x-section id="rsvp" class="bg-main-color-1 justify-between justify-items-center">
         <div class="mt-auto mb-auto container mx-auto">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-white text-center">RSVP</h2>
-            <p id="guest-submission-deadline" class="text-white text-center">Lūdzam apstiprināt ierašanos līdz <span
-                    class="font-bold">30.10.2025.</span></p>
             <livewire:guest-store/>
         </div>
         <x-arrow-down id="introduction" class="text-white"/>
