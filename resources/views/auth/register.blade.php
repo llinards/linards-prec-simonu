@@ -47,7 +47,8 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="bg-gray-800 text-white focus:text-black hover:text-black ms-3">
+            <x-primary-button type="submit"
+                              class="bg-gray-800 hover:bg-gray-300 focus:bg-gray-300 text-white hover:text-black focus:text-black ms-3">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
