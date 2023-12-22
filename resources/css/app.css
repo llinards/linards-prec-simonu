@@ -6,6 +6,14 @@
     .bg-main-color-1 {
         background-color: rgb(171, 95, 35)
     }
+
+    .bg-main-color-2 {
+        background-color: rgb(61, 39, 31)
+    }
+
+    .bg-main-color-3 {
+        background-color: rgb(40, 36, 40)
+    }
 }
 
 section#introduction {
