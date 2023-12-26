@@ -7,6 +7,7 @@
     <x-status-message/>
     @if($is_visible)
         <form wire:submit="save" class="max-w-md mx-auto sm:px-0 px-5 mt-3">
+            <x-honeypot livewire-model="extraFields"/>
             <div class="grid md:grid-cols-2 md:gap-6">
                 <div class="relative z-0 w-full mb-5 group">
                     <input wire:model="first_name" type="text" name="first_name" id="first_name"
