@@ -37,7 +37,7 @@
             <p class="text-white text-center">"Lejassliseri", Mālpils, Siguldas novads</p>
             <div class="flex flex-col max-w-lg mx-auto sm:px-0 px-5 mt-3">
                 <iframe style="border-radius:0.5rem;width:100%;height:300px" loading="lazy" allowfullscreen
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyYPR7IlB6UYRslm9TMAsEPg&key={{ env('GOOGLE_MAPS_API_KEY') }}"></iframe>
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyYPR7IlB6UYRslm9TMAsEPg&key={{ config('googlemaps.google_maps_api_key') }}"></iframe>
                 <x-primary-button
                     type="link"
                     href="https://www.waze.com/en/live-map/directions/brivdienu-maja-kamelijas-malpils?place=w.16384570.163649091.24553547"
