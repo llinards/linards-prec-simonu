@@ -3,7 +3,6 @@
 @include('layouts.partials.header')
 <body class="font-sans antialiased">
 <div class="bg-gray-100">
-    <!-- Page Content -->
     <main class="h-dvh overflow-y-scroll snap-mandatory snap-y scroll-smooth">
         {{ $slot }}
     </main>

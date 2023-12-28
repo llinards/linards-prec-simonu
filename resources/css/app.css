@@ -4,18 +4,48 @@
 
 @layer utilities {
     .bg-main-color-1 {
-        background-color: rgb(171, 95, 35)
+        background-color: rgb(171, 95, 35);
     }
 
     .bg-main-color-2 {
-        background-color: rgb(61, 39, 31)
+        background-color: rgb(61, 39, 31);
     }
 
     .bg-main-color-3 {
-        background-color: rgb(40, 36, 40)
+        background-color: rgb(40, 36, 40);
+    }
+
+    .color-idea-1 {
+        background-color: rgb(55, 59, 46);
+    }
+
+    .color-idea-2 {
+        background-color: rgb(124, 122, 111);
+    }
+
+    .color-idea-3 {
+        background-color: rgb(41, 68, 72);
+    }
+
+    .color-idea-4 {
+        background-color: rgb(162, 168, 164);
+    }
+
+    .color-idea-5 {
+        background-color: rgb(146, 85, 33);
+    }
+
+    .color-idea-6 {
+        background-color: rgb(83, 33, 17);
     }
 }
 
 section#introduction {
     background-image: url('/public/storage/intro-background.jpg');
+}
+
+.splide__arrow {
+    background: transparent !important;
+    margin-left: 16px;
+    margin-right: 16px;
 }
