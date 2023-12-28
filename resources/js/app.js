@@ -16,7 +16,6 @@ import 'fslightbox';
 document.addEventListener('DOMContentLoaded', function () {
     const inspirationGallery = new Splide('#inspiration-gallery', {
         lazyLoad: 'sequential',
-        pagination: false,
     });
 
     inspirationGallery.mount();
