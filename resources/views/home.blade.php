@@ -33,12 +33,12 @@
     </x-section>
     <x-section id="location" class="bg-main-color-3">
         <x-arrow-down id="agenda" class="text-white rotate-180"/>
-        <div class="my-auto container mx-auto">
+        <div class="my-auto container max-w-lg mx-auto sm:px-0 px-5">
             <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Svinību
                 vieta</h2>
             <p class="text-white text-center text-xl">Brīvdienu Māja "Kamēlijas"</p>
             <p class="text-white text-center">"Lejassliseri", Mālpils, Siguldas novads</p>
-            <div class="flex flex-col max-w-lg mx-auto sm:px-0 px-5 mt-3">
+            <div class="flex flex-col mt-3">
                 <iframe style="border-radius:0.5rem;width:100%;height:300px" loading="lazy" allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyYPR7IlB6UYRslm9TMAsEPg&key={{ config('googlemaps.google_maps_api_key') }}"></iframe>
                 <x-primary-button
@@ -58,37 +58,43 @@
     </x-section>
     <x-section id="dress-code" class="bg-white">
         <x-arrow-down id="location" class="text-black rotate-180"/>
-        <div class="my-auto container mx-auto">
+        <div class="my-auto container mx-auto sm:px-0 px-5">
             <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-black font-bold mb-3 uppercase">Dress Code</h2>
-            <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Krāsu palete</h3>
-            <div class="flex justify-center gap-2 max-w-md mx-auto sm:px-0 px-5 my-3">
-                <div class="color-idea-1 w-10 md:h-40 h-20"></div>
-                <div class="color-idea-2 w-10 md:h-40 h-20"></div>
-                <div class="color-idea-3 w-10 md:h-40 h-20"></div>
-                <div class="color-idea-4 w-10 md:h-40 h-20"></div>
-                <div class="color-idea-5 w-10 md:h-40 h-20"></div>
-                <div class="color-idea-6 w-10 md:h-40 h-20"></div>
-            </div>
-            <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Iedvesmai</h3>
-            <div id="inspiration-gallery" class="splide max-w-md mx-auto sm:px-0 px-5 mt-3">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide flex justify-center">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
-                                <img src="{{asset('/example-images/1.jpg')}}" class="h-64 object-cover" alt="">
-                            </a>
-                        </li>
-                        <li class="splide__slide flex justify-center">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
-                                <img src="{{asset('/example-images/2.jpg')}}" class="h-64 object-cover" alt="">
-                            </a>
-                        </li>
-                        <li class="splide__slide flex justify-center">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
-                                <img src="{{asset('/example-images/3.jpg')}}" class="h-64 object-cover" alt="">
-                            </a>
-                        </li>
-                    </ul>
+            <div class="flex flex-wrap justify-center">
+                <div class="md:w-1/2">
+                    <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Krāsu palete</h3>
+                    <div class="flex justify-center gap-2 my-3">
+                        <div class="color-idea-1 w-10 md:h-80 h-20"></div>
+                        <div class="color-idea-2 w-10 md:h-80 h-20"></div>
+                        <div class="color-idea-3 w-10 md:h-80 h-20"></div>
+                        <div class="color-idea-4 w-10 md:h-80 h-20"></div>
+                        <div class="color-idea-5 w-10 md:h-80 h-20"></div>
+                        <div class="color-idea-6 w-10 md:h-80 h-20"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Iedvesmai</h3>
+                    <div id="inspiration-gallery" class="splide max-w-md mx-auto mt-3">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
+                                        <img src="{{asset('/example-images/1.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
+                                        <img src="{{asset('/example-images/2.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
+                                        <img src="{{asset('/example-images/3.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
