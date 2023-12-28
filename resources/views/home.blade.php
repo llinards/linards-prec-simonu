@@ -8,13 +8,15 @@
         <x-arrow-down id="rsvp" class="animate-bounce"/>
     </x-section>
     <x-section id="rsvp" class="bg-main-color-1 justify-between justify-items-center">
-        <div class="mt-auto mb-auto container mx-auto">
+        <x-arrow-down id="introduction" class="text-white rotate-180"/>
+        <div class="my-auto container mx-auto">
             <livewire:guest-store/>
         </div>
         <x-arrow-down id="agenda" class="text-white"/>
     </x-section>
     <x-section id="agenda" class="bg-main-color-2">
-        <div class="mt-auto mb-auto container mx-auto">
+        <x-arrow-down id="rsvp" class="text-white rotate-180"/>
+        <div class="my-auto container mx-auto">
             <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Dienas
                 plāns</h2>
             <ul class="text-center">
@@ -30,7 +32,8 @@
         <x-arrow-down id="location" class="text-white"/>
     </x-section>
     <x-section id="location" class="bg-main-color-3">
-        <div class="mt-auto mb-auto container mx-auto">
+        <x-arrow-down id="agenda" class="text-white rotate-180"/>
+        <div class="my-auto container mx-auto">
             <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Svinību
                 vieta</h2>
             <p class="text-white text-center text-xl">Brīvdienu Māja "Kamēlijas"</p>
@@ -51,6 +54,44 @@
                 </x-primary-button>
             </div>
         </div>
-        <x-arrow-down id="location" class="text-white"/>
+        <x-arrow-down id="dress-code" class="text-white"/>
+    </x-section>
+    <x-section id="dress-code" class="bg-white">
+        <x-arrow-down id="location" class="text-black rotate-180"/>
+        <div class="my-auto container mx-auto">
+            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-black font-bold mb-3 uppercase">Dress Code</h2>
+            <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Krāsu palete</h3>
+            <div class="flex justify-center gap-2 max-w-md mx-auto sm:px-0 px-5 my-3">
+                <div class="color-idea-1 w-10 md:h-40 h-20"></div>
+                <div class="color-idea-2 w-10 md:h-40 h-20"></div>
+                <div class="color-idea-3 w-10 md:h-40 h-20"></div>
+                <div class="color-idea-4 w-10 md:h-40 h-20"></div>
+                <div class="color-idea-5 w-10 md:h-40 h-20"></div>
+                <div class="color-idea-6 w-10 md:h-40 h-20"></div>
+            </div>
+            <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Iedvesmai</h3>
+            <div id="inspiration-gallery" class="splide max-w-md mx-auto sm:px-0 px-5 mt-3">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide flex justify-center">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
+                                <img src="{{asset('/example-images/1.jpg')}}" class="h-64 object-cover" alt="">
+                            </a>
+                        </li>
+                        <li class="splide__slide flex justify-center">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
+                                <img src="{{asset('/example-images/2.jpg')}}" class="h-64 object-cover" alt="">
+                            </a>
+                        </li>
+                        <li class="splide__slide flex justify-center">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
+                                <img src="{{asset('/example-images/3.jpg')}}" class="h-64 object-cover" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <x-arrow-down id="location" class="text-black"/>
     </x-section>
 </x-app-layout>
