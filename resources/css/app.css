@@ -51,30 +51,30 @@ section#introduction {
     margin-right: 16px;
 }
 
-#gallery {
+.gallery {
     columns: 4;
     column-gap: 10px;
 }
 
-.grid-item {
+.gallery-item {
     width: 100%;
     margin-bottom: 10px;
     break-inside: avoid;
 }
 
-.grid-item img {
+.gallery-image {
     max-width: 100%;
     border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
-    #gallery {
+    .gallery {
         columns: 3;
     }
 }
 
 @media (max-width: 762px) {
-    #gallery {
+    .gallery {
         columns: 2;
     }
 }
