@@ -1,23 +1,16 @@
 import './bootstrap';
-
+import '@splidejs/splide/css';
+import 'fslightbox';
 import Alpine from 'alpinejs';
 import 'flowbite';
-
 import Splide from '@splidejs/splide';
 
 window.Alpine = Alpine;
-
 Alpine.start();
 
-import '@splidejs/splide/css';
-
-import 'fslightbox';
-
 document.addEventListener('DOMContentLoaded', function () {
-    const inspirationGallery = new Splide('#inspiration-gallery', {
+    const inspirationGallery = new Splide('#inspiration-gallery.splide', {
         lazyLoad: 'sequential',
-        pagination: false,
     });
-
     inspirationGallery.mount();
 });
