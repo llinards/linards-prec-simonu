@@ -108,61 +108,61 @@
 
                 <div class="grid-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/1.jpg')}}">
-                        <img src="{{asset('/example-images/1.jpg')}}" class=""
+                        <img loading="lazy" src="{{asset('/example-images/1.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/2.jpg')}}">
-                        <img src="{{asset('/example-images/2.jpg')}}" class=""
+                        <img loading="lazy" src="{{asset('/example-images/2.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/3.jpg')}}">
-                        <img src="{{asset('/example-images/3.jpg')}}" class=""
+                        <img loading="lazy" src="{{asset('/example-images/3.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/4.jpg')}}">
-                        <img src="{{asset('/example-images/4.jpg')}}" class=""
+                        <img loading="lazy" src="{{asset('/example-images/4.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/5.jpg')}}">
-                        <img src="{{asset('/example-images/5.jpg')}}" class=""
+                        <img loading="lazy" src="{{asset('/example-images/5.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/1.jpg')}}">
-                        <img src="{{asset('/example-images/6.jpg')}}" class=""
+                    <a data-fslightbox="gallery" href="{{asset('/example-images/6.jpg')}}">
+                        <img loading="lazy" src="{{asset('/example-images/6.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/2.jpg')}}">
-                        <img src="{{asset('/example-images/7.jpg')}}" class=""
+                    <a data-fslightbox="gallery" href="{{asset('/example-images/7.jpg')}}">
+                        <img loading="lazy" src="{{asset('/example-images/7.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/3.jpg')}}">
-                        <img src="{{asset('/example-images/8.jpg')}}" class=""
+                    <a data-fslightbox="gallery" href="{{asset('/example-images/8.jpg')}}">
+                        <img loading="lazy" src="{{asset('/example-images/8.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/4.jpg')}}">
-                        <img src="{{asset('/example-images/9.jpg')}}" class=""
+                    <a data-fslightbox="gallery" href="{{asset('/example-images/9.jpg')}}">
+                        <img loading="lazy" src="{{asset('/example-images/9.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
                 <div class="grid-item">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/5.jpg')}}">
-                        <img src="{{asset('/example-images/10.jpg')}}" class=""
+                    <a data-fslightbox="gallery" href="{{asset('/example-images/10.jpg')}}">
+                        <img loading="lazy" src="{{asset('/example-images/10.jpg')}}" class=""
                              alt="">
                     </a>
                 </div>
