@@ -102,8 +102,8 @@
     </x-section>
     <x-section id="gallery" class="bg-main-color-3 position-relative">
         <x-arrow-down id="dress-code" class="text-white rotate-180"/>
-        <div class="container mx-auto sm:px-0 px-5 max-h-full overflow-y-auto">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Galerija</h2>
+        <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Galerija</h2>
+        <div class="gallery-container container mx-auto sm:px-0 px-5 max-h-full overflow-y-auto">
             <div class="gallery">
                 <div class="gallery-item">
                     <a data-fslightbox="gallery" href="{{asset('/example-images/1.jpg')}}">

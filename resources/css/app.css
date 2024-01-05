@@ -51,6 +51,20 @@ section#introduction {
     margin-right: 16px;
 }
 
+section#gallery {
+    overscroll-behavior: auto;
+}
+
+.gallery-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overscroll-behavior: auto;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
 .gallery {
     columns: 4;
     column-gap: 10px;
