@@ -15,6 +15,7 @@
         background-color: rgb(40, 36, 40);
     }
 
+
     .color-idea-1 {
         background-color: rgb(55, 59, 46);
     }
@@ -48,4 +49,32 @@ section#introduction {
     background: transparent !important;
     margin-left: 16px;
     margin-right: 16px;
+}
+
+#gallery {
+    columns: 4;
+    column-gap: 10px;
+}
+
+.grid-item {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    #gallery {
+        columns: 3;
+    }
+}
+
+@media (max-width: 762px) {
+    #gallery {
+        columns: 2;
+    }
 }
