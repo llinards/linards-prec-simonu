@@ -74,25 +74,24 @@
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Iedvesmai</h3>
-                    <div id="inspiration-gallery" class="splide max-w-md mx-auto mt-3">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide flex justify-center">
-                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
-                                        <img src="{{asset('/example-images/1.jpg')}}" class="h-80 object-cover" alt="">
-                                    </a>
-                                </li>
-                                <li class="splide__slide flex justify-center">
-                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
-                                        <img src="{{asset('/example-images/2.jpg')}}" class="h-80 object-cover" alt="">
-                                    </a>
-                                </li>
-                                <li class="splide__slide flex justify-center">
-                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
-                                        <img src="{{asset('/example-images/3.jpg')}}" class="h-80 object-cover" alt="">
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="inspiration-gallery max-w-md mx-auto mt-3">
+                        <div class="inspiration-gallery-item">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
+                                <img loading="lazy" src="{{asset('/example-images/1.jpg')}}"
+                                     class="inspiration-gallery-image max-w-full" alt="">
+                            </a>
+                        </div>
+                        <div class="inspiration-gallery-item">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
+                                <img loading="lazy" src="{{asset('/example-images/2.jpg')}}"
+                                     class="inspiration-gallery-image max-w-full" alt="">
+                            </a>
+                        </div>
+                        <div class="inspiration-gallery-item">
+                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
+                                <img loading="lazy" src="{{asset('/example-images/3.jpg')}}"
+                                     class="inspiration-gallery-image max-w-full" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
