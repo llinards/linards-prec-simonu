@@ -4,11 +4,13 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-        @honeypot
+        <p class="font-medium text-sm text-gray-700 mb-3">Šī ir demo lapa! Nav nepieciešams ievadīt savu
+            informāciju.</p>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')"/>
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'demo@demo.lv'"
+                          required
                           autofocus autocomplete="username"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2"/>
         </div>
@@ -20,6 +22,7 @@
             <x-text-input id="password" class="block mt-1 w-full"
                           type="password"
                           name="password"
+                          :value="'password'"
                           required autocomplete="current-password"/>
 
             <x-input-error :messages="$errors->get('password')" class="mt-2"/>

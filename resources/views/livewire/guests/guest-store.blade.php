@@ -56,7 +56,7 @@
                 <x-input-error :messages="$errors->get('is_staying')" class="mt-2 text-white"/>
             </fieldset>
             <div class="flex justify-center">
-                <x-primary-button class="bg-white text-black" type="submit">
+                <x-primary-button class="bg-white hover:bg-gray-300 focus:bg-gray-300" type="submit">
                     Apstiprinu
                 </x-primary-button>
             </div>
@@ -64,9 +64,16 @@
     @endif
     @if($after_submit)
         <div class="flex justify-center max-w-md mx-auto sm:px-0 px-5">
-            <x-primary-button class="bg-white text-black" type="button" wire:click="toggleFormVisibility">
+            <x-primary-button class="bg-white hover:bg-gray-300 focus:bg-gray-300" type="button"
+                              wire:click="toggleFormVisibility">
                 Pievienot vēl viesi
             </x-primary-button>
         </div>
+        <p class="text-white text-center text-sm mt-3"><a class="underline" href="/viesi"
+                                                          target="_blank"><strong>Šeit</strong></a>
+            vari
+            apskatīties,
+            kā izskatās visi
+            pieteikumi.</p>
     @endif
 </div>
