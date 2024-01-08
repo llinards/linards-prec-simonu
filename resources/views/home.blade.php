@@ -74,24 +74,25 @@
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Iedvesmai</h3>
-                    <div class="inspiration-gallery max-w-md mx-auto mt-3">
-                        <div class="inspiration-gallery-item">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
-                                <img loading="lazy" src="{{asset('/example-images/1.jpg')}}"
-                                     class="inspiration-gallery-image max-w-full" alt="">
-                            </a>
-                        </div>
-                        <div class="inspiration-gallery-item">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
-                                <img loading="lazy" src="{{asset('/example-images/2.jpg')}}"
-                                     class="inspiration-gallery-image max-w-full" alt="">
-                            </a>
-                        </div>
-                        <div class="inspiration-gallery-item">
-                            <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
-                                <img loading="lazy" src="{{asset('/example-images/3.jpg')}}"
-                                     class="inspiration-gallery-image max-w-full" alt="">
-                            </a>
+                    <div id="inspiration-gallery" class="splide max-w-md mx-auto mt-3">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/1.jpg')}}">
+                                        <img src="{{asset('/example-images/1.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/2.jpg')}}">
+                                        <img src="{{asset('/example-images/2.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                                <li class="splide__slide flex justify-center">
+                                    <a data-fslightbox="inspiration-gallery" href="{{asset('/example-images/3.jpg')}}">
+                                        <img src="{{asset('/example-images/3.jpg')}}" class="h-80 object-cover" alt="">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -166,6 +167,18 @@
                 </div>
             </div>
         </div>
-        <x-arrow-down id="dress-code" class="text-white"/>
+        <x-arrow-down id="contacts" class="text-white"/>
+    </x-section>
+    <x-section id="contacts" class="bg-main-color-2">
+        <x-arrow-down id="gallery" class="text-white rotate-180"/>
+        <div class="my-auto container mx-auto">
+            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Kontakti</h2>
+            <ul class="text-center">
+                <li class="text-white text-xl py-2"><strong>Līgavainis:</strong><br/>Linards +371 22345678</li>
+                <li class="text-white text-xl py-2"><strong>Līgava:</strong><br/>Simona +371 22345678</li>
+                <li class="text-white text-xl py-2"><strong>Vedējtēvs:</strong><br/>Linards +371 22345678</li>
+                <li class="text-white text-xl py-2"><strong>Vedējmāte:</strong><br/>Simona +371 22345678</li>
+            </ul>
+        </div>
     </x-section>
 </x-app-layout>
