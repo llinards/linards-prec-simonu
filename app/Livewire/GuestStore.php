@@ -11,10 +11,6 @@ use Livewire\Component;
 
 class GuestStore extends Component
 {
-    use UsesSpamProtection;
-
-    public HoneypotData $extraFields;
-
     #[Validate('required', message: 'Vārds ir obligāts.')]
     #[Validate('string', message: 'Vārds drīkst sastāvēt tikai no burtiem.')]
     #[Validate('max:255', message: 'Vārds ir aizdomīgi garš.')]
@@ -39,15 +35,9 @@ class GuestStore extends Component
     public bool $is_visible = true;
     public bool $after_submit = false;
 
-    public function mount(): void
-    {
-        $this->extraFields = new HoneypotData();
-    }
-
     public function save(): void
     {
         $this->validate();
-        $this->protectAgainstSpam();
         try {
             Guest::create($this->all());
             $this->reset();
