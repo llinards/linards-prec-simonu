@@ -80,18 +80,6 @@ section#gallery {
     max-width: 100%;
 }
 
-.inspiration-gallery {
-    columns: 3;
-    column-gap: 5px;
-}
-
-.inspiration-gallery-item {
-    width: 100%;
-    margin-bottom: 5px;
-    break-inside: avoid;
-}
-
-
 @media (max-width: 1200px) {
     .gallery {
         columns: 3;
