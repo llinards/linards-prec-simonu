@@ -16,5 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()->create();
         Guest::factory()->count(10)->create();
+        $this->call([
+            ImageSeeder::class,
+        ]);
     }
 }
