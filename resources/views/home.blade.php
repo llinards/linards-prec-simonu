@@ -106,66 +106,15 @@
         <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Galerija</h2>
         <div class="gallery-container container mx-auto sm:px-0 px-5 max-h-full overflow-y-auto">
             <div class="gallery lg:columns-4 md:columns-3 columns-2 gap-2">
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/1.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/1.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/2.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/2.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/3.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/3.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/4.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/4.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/5.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/5.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/6.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/6.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/7.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/7.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/8.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/8.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/9.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/9.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
-                <div class="gallery-item w-full mb-2 break-inside-avoid">
-                    <a data-fslightbox="gallery" href="{{asset('/example-images/10.jpg')}}">
-                        <img loading="lazy" src="{{asset('/example-images/10.jpg')}}" class="gallery-image w-full"
-                             alt="">
-                    </a>
-                </div>
+                @foreach($images as $image)
+                    <div class="gallery-item w-full mb-2 break-inside-avoid">
+                        <a data-fslightbox="gallery" href="{{asset('storage/gallery/'.$image->name)}}">
+                            <img loading="lazy" src="{{asset('storage/gallery/'.$image->name)}}"
+                                 class="gallery-image w-full"
+                                 alt="">
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <x-arrow-down id="contacts" class="text-white"/>
