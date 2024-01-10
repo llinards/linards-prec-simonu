@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::redirect('/dashboard', '/viesi');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/viesi', [GuestController::class, 'index'])->name('dashboard');
