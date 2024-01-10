@@ -1,6 +1,6 @@
 <div>
     @if(!$after_submit)
-        <h2 class="lg:text-4xl sm:text-3xl text-2xl text-white text-center uppercase">RSVP</h2>
+        <h2 class="lg:text-4xl sm:text-3xl text-2xl text-white font-bold text-center uppercase">RSVP</h2>
         <p class="text-white text-center">Lūdzam apstiprināt ierašanos līdz <span
                 class="font-bold">30.10.2025.</span></p>
     @endif
