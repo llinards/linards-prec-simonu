@@ -13,6 +13,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
             colors: {},
         },
@@ -23,3 +24,7 @@ export default {
         forms
     ],
 };
+
+// citu fontu https://eng.m.fontke.com/family/388732/style/
+
+
