@@ -7,10 +7,10 @@
                     <thead
                         class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 text-center">
                             Viesu skaits
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 text-center">
                             Kopā nakšņotāji
                         </th>
                     </tr>
@@ -18,10 +18,10 @@
                     <tbody>
                     <tr class="odd:bg-white even:bg-gray-50 border-b">
                         <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            class="px-6 py-4 text-center">
                             {{ count($guests) }}
                         </th>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 text-center">
                             {{ count($guests->where('is_staying', true)) }}
                         </td>
                     </tr>

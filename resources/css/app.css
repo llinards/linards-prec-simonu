@@ -51,3 +51,7 @@
 .gallery-container::-webkit-scrollbar {
     display: none;
 }
+
+.filepond--item {
+    width: calc(50% - 0.5em);
+}

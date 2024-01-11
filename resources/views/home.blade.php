@@ -132,3 +132,14 @@
         </div>
     </x-section>
 </x-app-layout>
+
+<script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+        const inspirationGallery = new Splide('#inspiration-gallery.splide', {
+            lazyLoad: 'sequential',
+            arrows: false,
+        });
+        inspirationGallery.mount();
+    });
+</script>
+
