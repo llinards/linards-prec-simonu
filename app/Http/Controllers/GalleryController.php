@@ -25,10 +25,12 @@ class GalleryController extends Controller
         );
         try {
             foreach ($data['gallery-images'] as $image) {
-                Storage::disk('public')->move($image, 'gallery/'.basename($image));
-                Image::create([
-                    'name' => basename($image),
-                ]);
+                if ($image !== null) {
+                    Storage::disk('public')->move($image, 'gallery/'.basename($image));
+                    Image::create([
+                        'name' => basename($image),
+                    ]);
+                }
             }
             return back()->with('success', 'Pievienots.');
         } catch (\Throwable $th) {
