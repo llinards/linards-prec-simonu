@@ -18,6 +18,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::post('/gallery/add', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('gallery.destroy');
     Route::post('/gallery/image/upload', [GalleryController::class, 'upload'])->name('gallery.upload');
     Route::delete('/gallery/image/upload', [GalleryController::class, 'delete'])->name('gallery.delete');
 });

@@ -11,7 +11,8 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        return view('gallery.index');
+        $images = Image::all();
+        return view('gallery.index', compact('images'));
     }
 
     public function store(Request $data)
@@ -33,6 +34,28 @@ class GalleryController extends Controller
                 }
             }
             return back()->with('success', 'Pievienots.');
+        } catch (\Throwable $th) {
+            Log::error($th);
+            return back()->with('error', 'Kļūda! Mēģini vēlreiz.');
+        }
+    }
+
+    public function destroy(Request $data)
+    {
+        $this->validate($data, [
+            'gallery-images' => 'required'
+        ],
+            [
+                'gallery-images.required' => 'Nav izvēlēts neviens attēls.'
+            ]
+        );
+        try {
+            foreach ($data['gallery-images'] as $image) {
+                $image = Image::findOrFail($image);
+                Storage::disk('public')->delete('gallery/'.$image->name);
+                Image::where('id', $image->id)->delete();
+            }
+            return back()->with('success', 'Dzēsts.');
         } catch (\Throwable $th) {
             Log::error($th);
             return back()->with('error', 'Kļūda! Mēģini vēlreiz.');
