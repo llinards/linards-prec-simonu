@@ -52,7 +52,6 @@ class GalleryController extends Controller
         try {
             foreach ($data['gallery-images'] as $image) {
                 $image = Image::findOrFail($image);
-                Storage::disk('public')->delete('gallery/'.$image->name);
                 Image::where('id', $image->id)->delete();
             }
             return back()->with('success', 'Dzēsts.');
