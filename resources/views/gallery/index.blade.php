@@ -1,6 +1,6 @@
 <x-app-layout>
     @include('layouts.admin-navigation')
-    <div class="py-12">
+    <div class="sm:pt-12 pt-6 pb-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <h2 class="text-2xl mb-3">{{ __('Add images') }}</h2>
