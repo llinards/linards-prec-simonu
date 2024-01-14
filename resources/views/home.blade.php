@@ -2,8 +2,8 @@
     <x-section id="introduction" class="justify-between font-roboto bg-cover bg-center"
                style="background-image:url({{asset('storage/intro-background.jpg')}})">
         <div class="lg:pt-10 pt-20">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center">Mēs precamies!</h2>
-            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center font-bold">Linards & Simona</h1>
+            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center mb-5">Mēs precamies!</h2>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center font-bold mb-5">Linards & Simona</h1>
             <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">30.12.2025.</h3>
         </div>
         <x-arrow-down id="rsvp" class="animate-bounce"/>
@@ -18,16 +18,16 @@
     <x-section id="agenda" class="bg-main-color-2">
         <x-arrow-down id="rsvp" class="text-white rotate-180"/>
         <div class="my-auto container mx-auto">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Dienas
-                plāns</h2>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center text-white font-bold mb-5 uppercase">Dienas
+                plāns</h1>
             <ul class="text-center">
-                <li class="text-white text-xl py-2"><strong>15:00</strong> Ceremonija</li>
-                <li class="text-white text-xl py-2"><strong>16:00</strong> Fotogrāfēšanās</li>
-                <li class="text-white text-xl py-2"><strong>17:00</strong> Ierašanās viesu namā</li>
-                <li class="text-white text-xl py-2"><strong>19:00</strong> Vakariņas</li>
-                <li class="text-white text-xl py-2"><strong>21:00</strong> Mičošana</li>
-                <li class="text-white text-xl py-2"><strong>23:00</strong> Pirmā deja</li>
-                <li class="text-white text-xl py-2"><strong>00:00</strong> Kūkas griešana</li>
+                <li class="text-white text-xl py-3"><strong>15:00</strong> Ceremonija</li>
+                <li class="text-white text-xl py-3"><strong>16:00</strong> Fotogrāfēšanās</li>
+                <li class="text-white text-xl py-3"><strong>17:00</strong> Ierašanās viesu namā</li>
+                <li class="text-white text-xl py-3"><strong>19:00</strong> Vakariņas</li>
+                <li class="text-white text-xl py-3"><strong>22:00</strong> Pirmā deja</li>
+                <li class="text-white text-xl py-3"><strong>23:00</strong> Kūkas griešana</li>
+                <li class="text-white text-xl py-3"><strong>00:00</strong> Mičošana</li>
             </ul>
         </div>
         <x-arrow-down id="location" class="text-white"/>
@@ -35,11 +35,11 @@
     <x-section id="location" class="bg-main-color-3">
         <x-arrow-down id="agenda" class="text-white rotate-180"/>
         <div class="my-auto container max-w-lg mx-auto sm:px-0 px-5">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Svinību
-                vieta</h2>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center text-white font-bold mb-5 uppercase">Svinību
+                vieta</h1>
             <p class="text-white text-center text-xl">Brīvdienu Māja "Kamēlijas"</p>
-            <p class="text-white text-center">"Lejassliseri", Mālpils, Siguldas novads</p>
-            <div class="flex flex-col mt-3">
+            <p class="text-white text-center mb-5">"Lejassliseri", Mālpils, Siguldas novads</p>
+            <div class="flex flex-col">
                 <iframe style="border-radius:0.5rem;width:100%;height:300px" loading="lazy" allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyYPR7IlB6UYRslm9TMAsEPg&key={{ config('googlemaps.google_maps_api_key') }}"></iframe>
                 <x-primary-button
@@ -60,7 +60,7 @@
     <x-section id="dress-code" class="bg-white">
         <x-arrow-down id="location" class="text-black rotate-180"/>
         <div class="my-auto container mx-auto sm:px-0 px-5">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-black font-bold mb-3 uppercase">Dress Code</h2>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center font-bold mb-5 uppercase">Dress Code</h1>
             <div class="flex flex-wrap justify-center">
                 <div class="md:w-1/2">
                     <h3 class="lg:text-3xl sm:text-2xl text-xl text-center">Krāsu palete</h3>
@@ -103,7 +103,7 @@
     </x-section>
     <x-section id="gallery" class="bg-main-color-3 position-relative">
         <x-arrow-down id="dress-code" class="text-white rotate-180"/>
-        <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Galerija</h2>
+        <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center text-white font-bold mb-5 uppercase">Galerija</h1>
         <div class="gallery-container container mx-auto sm:px-0 px-5 max-h-full overflow-y-auto">
             <div class="gallery lg:columns-4 md:columns-3 columns-2 gap-2">
                 @foreach($images as $image)
@@ -122,12 +122,12 @@
     <x-section id="contacts" class="bg-main-color-2">
         <x-arrow-down id="gallery" class="text-white rotate-180"/>
         <div class="my-auto container mx-auto">
-            <h2 class="lg:text-4xl sm:text-3xl text-2xl text-center text-white font-bold mb-3 uppercase">Kontakti</h2>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center text-white font-bold mb-5 uppercase">Kontakti</h1>
             <ul class="text-center">
-                <li class="text-white text-xl py-2"><strong>Līgavainis:</strong><br/>Linards +371 22345678</li>
-                <li class="text-white text-xl py-2"><strong>Līgava:</strong><br/>Simona +371 22345678</li>
-                <li class="text-white text-xl py-2"><strong>Vedējtēvs:</strong><br/>Linards +371 22345678</li>
-                <li class="text-white text-xl py-2"><strong>Vedējmāte:</strong><br/>Simona +371 22345678</li>
+                <li class="text-white text-xl py-3"><strong>Līgavainis:</strong><br/>Linards +371 22345678</li>
+                <li class="text-white text-xl py-3"><strong>Līgava:</strong><br/>Simona +371 22345678</li>
+                <li class="text-white text-xl py-3"><strong>Vedējtēvs:</strong><br/>Linards +371 22345678</li>
+                <li class="text-white text-xl py-3"><strong>Vedējmāte:</strong><br/>Simona +371 22345678</li>
             </ul>
         </div>
     </x-section>
