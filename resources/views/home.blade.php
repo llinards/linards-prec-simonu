@@ -60,7 +60,7 @@
     <x-section id="dress-code" class="bg-main-color-4 font-lora">
         <x-arrow-down id="location" class="text-black rotate-180"/>
         <div class="my-auto container mx-auto sm:px-0 px-5">
-            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center font-bold mb-5 uppercase">Dress Code</h1>
+            <h1 class="lg:text-6xl sm:text-5xl text-4xl text-center font-bold mb-3 uppercase">Dress Code</h1>
             <div class="flex flex-wrap justify-center">
                 <div class="md:w-full">
                     <h3 class="lg:text-3xl sm:text-2xl text-xl text-center uppercase">Krāsu palete</h3>
