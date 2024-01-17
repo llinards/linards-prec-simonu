@@ -74,7 +74,6 @@
                     </div>
                 </div>
                 <div class="md:w-full">
-                    <h3 class="lg:text-3xl sm:text-2xl text-xl text-center uppercase">Iedvesmai</h3>
                     <div id="inspiration-gallery" class="splide max-w-md mx-auto mt-3">
                         <div class="splide__track">
                             <ul class="splide__list">
